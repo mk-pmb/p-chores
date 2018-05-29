@@ -1,5 +1,5 @@
 { "name": "p-chores",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "String together your potentially promise-returning functions into a chain of responsibility. (The fallback pattern trying all strategies one after the other until one of them solves the task.)",
   "keywords": [
     "promise",

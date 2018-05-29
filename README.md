@@ -11,7 +11,7 @@ other until one of them solves the task.)
 <!--/#echo -->
 
 I rolled my own because I was too impatient waiting for
-[promise-fallback](https://github.com/softonic/promisefallback/)
+[promisefallback](https://github.com/softonic/promisefallback/)
 to merge my pull requests.
 
 
