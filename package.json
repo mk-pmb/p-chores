@@ -1,0 +1,37 @@
+{ "name": "p-chores",
+  "version": "0.1.0",
+  "description": "String together your potentially promise-returning functions into a chain of responsibility. (The fallback pattern trying all strategies one after the other until one of them solves the task.)",
+  "keywords": [
+    "promise",
+    "chain",
+    "chain of responsibility",
+    "fallback"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/p-chores/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/p-chores.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/p-chores/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "cor.js",
+  "scripts": { "test": "nodejs test/all.node.js" },
+  "directories": { "test": "test" },
+
+  "dependencies": {},
+  "devDependencies": {
+    "bluebird": "^2.3.11",
+    "esmod-pmb": "^0.1.5",
+    "p-tape": "^3.0.0"
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
