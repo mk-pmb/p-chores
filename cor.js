@@ -31,7 +31,10 @@ module.exports = (function () {
   }
 
   return function promiseChainOfResponsibility(strategies, opt) {
-    if (!strategies) { return function () { return okPr; }; }
+    if (!strategies) {
+      opt = Promise.resolve(opt.unsolved);
+      return function () { return opt; };
+    }
     opt = (opt || false);
     return function () {
       return tryNx(opt, strategies, 0, this, arSlc.call(arguments));
