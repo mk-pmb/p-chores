@@ -88,43 +88,6 @@ test('Support custom unsolved value', async (t) => {
 });
 
 
-test('No strategies = unsolved', async (t) => {
-  t.plan(1);
-  const opt = { unsolved: '???' };
-  const results = await Promise.all([
-    pChores([], opt)(),
-    pChores(null, opt)(),
-    pChores(false, opt)(),
-    pChores(true, opt)(),
-    pChores(function hi() { return 'Hello.'; }, opt)(),
-  ]);
-  t.deepEqual(results, [
-    '???',
-    '???',
-    '???',
-    '???',
-    '???',
-  ]);
-});
-
-
-test('Catch accidential async decider', async (t) => {
-  t.plan(1);
-  function selfTest(x) { return x.check(); }
-  const strategies = [
-    { check() { return false; } },
-    { async check() { return true; } },
-    { check() { return true; } },
-  ];
-  try {
-    await pChores(strategies, { accept: selfTest })();
-    t.fail('then-able not detected');
-  } catch (err) {
-    t.equal(err.name, 'p-chores:accepted.then');
-  }
-});
-
-
 
 
 
